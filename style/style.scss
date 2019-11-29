@@ -1,0 +1,126 @@
+/*
+    This is the text "I am Suzanne Mol" in the design
+*/
+$design-baseFont: 39;
+
+/*
+    57 originally but increased to compensate for text-stroke, which is drawn
+    inside of the character. The dewsign is drawn on the outside.
+ */
+
+$hiFontStroke: 0.03em;
+
+@font-face {
+  font-family: "alataregular";
+  src: url("alata-regular-webfont.woff2") format("woff2"), url("alata-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffe1cc;
+  font-size:1vw;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.block {
+  background-color: #5c6962;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .textBox {
+    border: 0px solid #ffffff;
+    position: relative;
+    font-family: alataregular;
+    font-size:1vw;
+    padding-top: 6rem;
+    padding-bottom: 8rem; //compensate for difference in top VS ottom text and it's line height
+
+    .sayHi {
+      position: absolute;
+      top:-1.23em - ($hiFontStroke * 1.5);
+      left: -0.06em;
+      font-size: 18em;
+      color: #5c6962;
+      -webkit-text-fill-color: #ffe1cc; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: $hiFontStroke;
+      -webkit-text-stroke-color: #5c6962;
+    }
+
+    .iAmSuzanne {
+      .text {
+        color: #ffffff;
+        font-size:10em;
+        line-height: 1;
+      }
+    }
+
+    .underConstruction {
+        width: 55rem;
+        margin-top: 6rem;
+
+      .text{
+        color: #ffe1cc;
+        font-size: 3.7em;
+        line-height: 1.4;
+        a {
+            color:#ffffff;
+            text-decoration: none;
+        }
+      }
+    }
+
+    .challengeAccepted {
+        width: 60rem;
+        margin-top: 6rem;
+
+      .text {
+        color: #ffffff;
+        font-size: 3.3em;
+        text-transform: uppercase;
+        letter-spacing: 0.275em;
+        line-height: 1;  
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+
+    html, body {
+        font-size:10px;
+    }
+    
+    .block .textBox {
+        font-size:10px;
+    }
+}
+
+
+/*b
+
+@media (min-aspect-ratio: 375/667) {
+  .block {
+    //height:calc(37vh + (370/285) * 1vw);
+  }
+}
+
+
+@media (max-aspect-ratio: 375/667) {
+  .block {
+    //height:calc(40vh + (370/285) * 1vw);
+  }
+}
+*/
