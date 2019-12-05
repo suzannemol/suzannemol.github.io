@@ -110,28 +110,30 @@ html, body {
   line-height: 1;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-aspect-ratio: 8 / 6) {
   html, body {
-    font-size: 10px;
+    font-size: 1vw;
   }
   .block .textBox {
-    font-size: 10px;
+    font-size: 1vw;
   }
 }
 
-/*b
-
-@media (min-aspect-ratio: 375/667) {
-  .block {
-    //height:calc(37vh + (370/285) * 1vw);
+@media screen and (min-aspect-ratio: 8 / 6) {
+  html, body {
+    font-size: 1vh;
+  }
+  .block .textBox {
+    font-size: 1vh;
   }
 }
 
-
-@media (max-aspect-ratio: 375/667) {
-  .block {
-    //height:calc(40vh + (370/285) * 1vw);
+@media screen and (min-aspect-ratio: 8 / 7) and (max-aspect-ratio: 8 / 6) {
+  html, body {
+    font-size: 0.8vw;
+  }
+  .block .textBox {
+    font-size: 0.8vw;
   }
 }
-*/
 /*# sourceMappingURL=style.css.map */

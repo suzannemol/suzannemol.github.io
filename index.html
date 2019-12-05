@@ -13,10 +13,19 @@
         </script>
         <script>
             var captureOutboundLink = function(url) {
-                ga('send', 'event', 'outbound', 'click', url, {
-                    'transport': 'beacon',
-                    'hitCallback': function(){document.location = url;}
-                });
+                setTimeout(function(){(triggeredCallback === false)? document.location = url: null;}, 500)
+                gtag(
+                    "event", 
+                    url,
+                    {
+                        event_label: "click",
+                        event_category: "outbound",
+                        event_callback: function() {
+                            document.location = url;
+                        }
+                    }
+
+                )
             }
         </script>
     </head>
@@ -30,7 +39,7 @@
                     </div>
                     <div class="underConstruction">
                         <span class="text">My website is under construction, but you can learn more about me
-                            <a href="https://www.linkedin.com/in/suzannemol/" target="_new">here</a>.</span>
+                            <a href="https://www.linkedin.com/in/suzannemol/" onclick="captureOutboundLink('https\://www.linkedin.com/in/suzannemol/'); return false;" target="_new">here</a>.</span>
                     </div>
                     <div class="challengeAccepted">
                         <span class="text">Challenge Accepted</span>
