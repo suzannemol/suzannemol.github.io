@@ -3,7 +3,7 @@
 */
 /*
     57 originally but increased to compensate for text-stroke, which is drawn
-    inside of the character. The dewsign is drawn on the outside.
+    inside of the character. The design is drawn on the outside.
  */
 @font-face {
   font-family: "alataregular";
@@ -134,6 +134,12 @@ html, body {
   }
   .block .textBox {
     font-size: 0.8vw;
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .block .textBox .sayHi {
+    top: -0.83em;
   }
 }
 /*# sourceMappingURL=style.css.map */
