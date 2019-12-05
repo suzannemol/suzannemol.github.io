@@ -142,4 +142,10 @@ html, body {
     top: -0.83em;
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .block .textBox .sayHi {
+    top: -0.83em;
+  }
+}
 /*# sourceMappingURL=style.css.map */
