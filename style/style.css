@@ -65,15 +65,28 @@ html, body {
 
 .block .textBox .sayHi {
   position: absolute;
+  top: -13.1em;
+  width: 18em;
+  height: 14em;
+}
+
+.block .textBox .sayHi img {
+  width: 100%;
+}
+
+.block .textBox .hi2Container {
+  position: absolute;
   top: -1.275em;
   left: -0.06em;
+}
+
+.block .textBox .sayHi2 {
   font-size: 18em;
   color: #5c6962;
   -webkit-text-fill-color: #ffe1cc;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 0.03em;
   -webkit-text-stroke-color: #5c6962;
-  display: none;
 }
 
 .block .textBox .iAmSuzanne .text {
@@ -111,6 +124,14 @@ html, body {
   line-height: 1;
 }
 
+.position-test {
+  position: absolute;
+  top: -14em;
+  height: 14em;
+  width: 14em;
+  background-color: #bf87d4;
+}
+
 @media screen and (max-aspect-ratio: 8 / 6) {
   html, body {
     font-size: 1vw;
@@ -137,16 +158,4 @@ html, body {
     font-size: 0.8vw;
   }
 }
-
-@supports (-moz-appearance: none) {
-  .block .textBox .sayHi {
-    top: -0.83em;
-  }
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .block .textBox .sayHi {
-    top: -0.83em;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_testing.css.map */

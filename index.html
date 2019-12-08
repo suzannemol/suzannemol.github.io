@@ -4,38 +4,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hi there I'm Suzanne</title>
         <link rel="stylesheet" href="style/style.css">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153844167-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-153844167-1');
-        </script>
-        <script>
-            var captureOutboundLink = function(url) {
-                setTimeout(function(){(triggeredCallback === false)? document.location = url: null;}, 500)
-                gtag(
-                    "event", 
-                    url,
-                    {
-                        event_label: "click",
-                        event_category: "outbound",
-                        event_callback: function() {
-                            document.location = url;
-                        }
-                    }
-
-                )
-            }
-        </script>
     </head>
     <body>
         <div class="container">
             <div class="block">
                 <div class="textBox">
-                    <div class="sayHi">Hi,</div>
+                    <div class="sayHi">
+                        <img src="style/Hi.svg" alt="Hi," />
+                    </div>
                     <div class="iAmSuzanne">
                         <span class="text">I am Suzanne Mol</span>
                     </div>
